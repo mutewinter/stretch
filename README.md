@@ -11,4 +11,4 @@ export STRETCH_SESSION_SECRET='super secret and secure so it is safe'
 coffee server/server.coffee
 ```
 
-Open [`localhost:1234`](localhost:1234).
+Open [`localhost:5151`](localhost:5151).
