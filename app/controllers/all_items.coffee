@@ -4,6 +4,8 @@ ProductCheckbox = Ember.Object.extend
 module.exports = App.AllItemsController = Ember.ArrayController.extend
   sortProperties: ['sizeWeight', 'id']
   notEmpty: Ember.computed.gt 'length', 0
+  filteredProducts:
+    Ember.computed.filterProperty 'productCheckboxes', 'isChecked'
 
   init: ->
     @_super()
