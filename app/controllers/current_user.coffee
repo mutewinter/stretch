@@ -18,5 +18,5 @@ module.exports = App.CurrentUserController = Ember.ObjectController.extend
   ).property()
 
   hasCredentials: (->
-    !(Ember.isEmpty(@get('username')) and Ember.isEmpty(@get('apiKey')))
+    !(Ember.isEmpty(@get('username')) or Ember.isEmpty(@get('apiKey')))
   ).property('username', 'apiKey')
