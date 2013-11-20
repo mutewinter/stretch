@@ -1,6 +1,7 @@
 module.exports = App.AllItemsRoute = Ember.Route.extend
-  model: ->
+  setupController: (controller) ->
     @get('store').findAll('product').then (products) =>
+      controller.set('products', products)
       Ember.RSVP.all(products.invoke('get', 'items')).then (allItems) =>
         allItems.forEach (items) =>
-          @controllerFor('all_items').pushObjects items.toArray()
+          controller.pushObjects items.toArray()

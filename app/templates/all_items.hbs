@@ -1,26 +1,32 @@
-{{controller.length}} Items from {{products.length}} Products
+{{#if notEmpty}}
+  {{controller.length}} Items from {{products.length}} Products
 
-<table class="table table-condensed">
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Product</th>
-      <th>Status</th>
-      <th>Sprint.ly</th>
-    </tr>
-  </thead>
-  <tbody>
-    {{#each controller}}
+  <table class="table table-condensed">
+    <thead>
       <tr>
-        <td><span class="badge">{{score}}</span> {{title}}</td>
-        <td>{{product.displayName}}</td>
-        <td>{{status}}</td>
-        <td>
-          <a {{bind-attr href=sprintlyUrl}} target="_blank">
-            <i class="glyphicon glyphicon-share"></i>
-          </a>
-        </td>
+        <th>Size</th>
+        <th>Title</th>
+        <th>Product</th>
+        <th>Status</th>
+        <th>Sprint.ly</th>
       </tr>
-    {{/each}}
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      {{#each controller}}
+        <tr>
+          <td><span class="badge">{{score}}</span></td>
+          <td>{{title}}</td>
+          <td>{{product.displayName}}</td>
+          <td>{{status}}</td>
+          <td>
+            <a {{bind-attr href=sprintlyUrl}} target="_blank">
+              <i class="glyphicon glyphicon-share"></i>
+            </a>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+{{else}}
+  Loading all items for {{products.length}} Products...
+{{/if}}
