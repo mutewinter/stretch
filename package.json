@@ -17,7 +17,8 @@
   },
   "scripts": {
     "start": "cake server",
-    "test": "./node_modules/.bin/testem"
+    "test": "./node_modules/.bin/testem",
+    "postinstall": "cake build"
   },
   "dependencies": {
     "brunch": "~1.7.10",
