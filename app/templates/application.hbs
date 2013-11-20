@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="navbar navbar-default">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse"
+        data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      {{#link-to 'products' class="navbar-brand"}}Stretch{{/link-to}}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="container">
+      {{outlet}}
+    </div>
+  </div>
+</div>
