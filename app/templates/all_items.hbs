@@ -6,14 +6,20 @@
       <th>Title</th>
       <th>Product</th>
       <th>Status</th>
+      <th>Sprint.ly</th>
     </tr>
   </thead>
   <tbody>
     {{#each controller}}
       <tr>
         <td><span class="badge">{{score}}</span> {{title}}</td>
-        <td>{{product.name}}</td>
+        <td>{{product.displayName}}</td>
         <td>{{status}}</td>
+        <td>
+          <a {{bind-attr href=sprintlyUrl}} target="_blank">
+            <i class="glyphicon glyphicon-share"></i>
+          </a>
+        </td>
       </tr>
     {{/each}}
   </tbody>
