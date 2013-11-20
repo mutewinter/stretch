@@ -1,5 +1,5 @@
 module.exports = App.AllItemsController = Ember.ArrayController.extend
-  sortProperties: ['status']
+  sortProperties: ['sizeWeight']
   observesItems: (->
     @get('products').forEach((product) =>
       product.get('items').then (items) =>

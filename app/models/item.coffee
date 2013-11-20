@@ -4,9 +4,23 @@ module.exports = App.Item = DS.Model.extend
   title: attr('string')
   status: attr('string')
   score: attr('string')
+  number: attr('string')
   archived: attr('boolean')
 
   product: DS.belongsTo('product')
+
+  sizeWeight: (->
+    switch @get('score')
+      when 'S' then 0
+      when 'M' then 1
+      when 'L' then 2
+      when 'XL' then 3
+      else 5
+  ).property('score')
+
+  sprintlyUrl: (->
+    "https://sprint.ly/product/#{@get('product.id')}/#!/item/#{@get('number')}"
+  ).property('number', 'product.id')
 
 #   [
 #     {
