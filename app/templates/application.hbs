@@ -9,6 +9,19 @@
       </button>
       {{#link-to 'all_items' class="navbar-brand"}}Stretch{{/link-to}}
     </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        {{#view App.NavView}}
+          {{#link-to "sign_in"}}
+          {{#if currentUser.hasCredentials}}
+            Change user
+          {{else}}
+            Sign in
+          {{/if}}
+          {{/link-to}}
+        {{/view}}
+      </ul>
+    </div><!--/.nav-collapse -->
   </div>
 
   <div class="row">
