@@ -41,5 +41,4 @@ app.get '/api/products/:id/items', (req, res) ->
   request.get("#{BASE_URL}/products/#{req.params.id}/items.json", itemParams)
     .pipe(res)
 
-app.listen(1234)
-
+app.listen(process.env.PORT || 5151)
