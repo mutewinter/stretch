@@ -6,6 +6,7 @@ module.exports = App.Item = DS.Model.extend
   score: attr('string')
   number: attr('string')
   archived: attr('boolean')
+  type: attr('string')
 
   product: DS.belongsTo('product')
 
@@ -21,6 +22,13 @@ module.exports = App.Item = DS.Model.extend
   sprintlyUrl: (->
     "https://sprint.ly/product/#{@get('product.id')}/#!/item/#{@get('number')}"
   ).property('number', 'product.id')
+
+  rowClass: (->
+    switch @get('type')
+      when 'story'  then 'success'
+      when 'defect' then 'danger'
+      when 'test'   then 'info'
+  ).property('type')
 
 #   [
 #     {

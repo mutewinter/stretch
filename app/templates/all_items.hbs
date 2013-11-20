@@ -27,7 +27,7 @@
       </thead>
       <tbody>
         {{#each filteredContent}}
-          <tr>
+          <tr {{bind-attr class=rowClass}}>
             <td><span class="badge">{{score}}</span></td>
             <td>
               <a {{bind-attr href=sprintlyUrl}} target="_blank">
