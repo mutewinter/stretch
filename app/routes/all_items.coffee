@@ -10,3 +10,7 @@ module.exports = App.AllItemsRoute = Ember.Route.extend
       Ember.RSVP.all(products.invoke('get', 'items')).then (allItems) =>
         allItems.forEach (items) =>
           controller.pushObjects items.toArray()
+
+  activate: ->
+    @_super()
+    document.title = 'Stretch | All Items'
