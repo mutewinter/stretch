@@ -1,6 +1,7 @@
 # Stretch
 
-What do you do before you [Sprint](https://sprint.ly)? Stretch.
+What do you do before you [Sprint](https://sprint.ly)?
+[Stretch](http://stretch-app.herokuapp.com/).
 
 ## Make it Go
 
