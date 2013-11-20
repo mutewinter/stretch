@@ -1,5 +1,18 @@
 {{#if notEmpty}}
-  {{controller.length}} Items from {{products.length}} Products
+  {{filteredContent.length}} Items from {{products.length}} Products
+
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="checkboxes text-right">
+        {{#each productCheckboxes}}
+          <label>
+            {{input type='checkbox' checked=isChecked}}
+            {{product.displayName}}
+          </label>
+        {{/each}}
+      </div>
+    </div>
+  </div>
 
   <table class="table table-condensed">
     <thead>
@@ -12,7 +25,7 @@
       </tr>
     </thead>
     <tbody>
-      {{#each controller}}
+      {{#each filteredContent}}
         <tr>
           <td><span class="badge">{{score}}</span></td>
           <td>{{title}}</td>
