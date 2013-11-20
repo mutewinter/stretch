@@ -14,33 +14,35 @@
     </div>
   </div>
 
-  <table class="table table-condensed">
-    <thead>
-      <tr>
-        <th>Size</th>
-        <th>Title</th>
-        <th>Product</th>
-        <th>Status</th>
-        <th>Sprint.ly</th>
-      </tr>
-    </thead>
-    <tbody>
-      {{#each filteredContent}}
+  <div class="table-responsive">
+    <table class="table table-condensed">
+      <thead>
         <tr>
-          <td><span class="badge">{{score}}</span></td>
-          <td>{{title}}</td>
-          <td>{{product.displayName}}</td>
-          <td>{{status}}</td>
-          <td>
-            <a {{bind-attr href=sprintlyUrl}} target="_blank">
-              {{number}}
-              <i class="glyphicon glyphicon-share"></i>
-            </a>
-          </td>
+          <th>Size</th>
+          <th class="items-id">ID</th>
+          <th>Title</th>
+          <th>Product</th>
+          <th>Status</th>
         </tr>
-      {{/each}}
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+        {{#each filteredContent}}
+          <tr>
+            <td><span class="badge">{{score}}</span></td>
+            <td>
+              <a {{bind-attr href=sprintlyUrl}} target="_blank">
+                {{number}}
+                <i class="glyphicon glyphicon-share"></i>
+              </a>
+            </td>
+            <td>{{title}}</td>
+            <td>{{product.displayName}}</td>
+            <td>{{status}}</td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
 {{else}}
   Loading all items for {{products.length}} Products...
 {{/if}}
