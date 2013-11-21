@@ -1,6 +1,7 @@
 # ===== Config =====
 window.App = require 'config/app'
 require 'config/router'
+env = require 'config/environment'
 
 # Load all modules in order automagically. Ember likes things to work this
 # way so everything is in the App.* namespace.
@@ -15,5 +16,9 @@ folderOrder.forEach (folder) ->
     new RegExp("^#{folder}/").test(module)
   ).forEach((module) -> require(module))
 
-App.ApplicationAdapter = App.SprintlyAdapter
-App.ApplicationSerializer = App.SprintlySerializer
+
+if env.get('isDevelopment')
+  App.ApplicationAdapter = DS.FixtureAdapter
+else
+  App.ApplicationAdapter = App.SprintlyAdapter
+  App.ApplicationSerializer = App.SprintlySerializer

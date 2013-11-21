@@ -30,6 +30,19 @@ module.exports = App.Item = DS.Model.extend
       when 'test'   then 'info'
   ).property('type')
 
+App.Item.FIXTURES = [
+  {
+    id: '1-1'
+    title: 'As a herp derp I want to derp herp so that I can derp derp.'
+    status: 'someday'
+    score: 'M'
+    number: '1'
+    archived: false
+    type: 'story'
+    product: 1
+  }
+]
+
 #   [
 #     {
 #         "status": "backlog",
