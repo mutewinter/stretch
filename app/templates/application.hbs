@@ -16,6 +16,13 @@
     </ul>
   </div>
 
+  {{#if App.hasNewVersion}}
+    <div class="alert alert-success">
+      A new version of Stretch is available!
+      <a {{action refresh}} href="#">Refresh</a> get the sweet new features!
+    </div>
+  {{/if}}
+
   <div class="row">
     <div class="container">
       {{outlet}}
