@@ -2,10 +2,10 @@ Ember.Application.initializer
   name: 'version_check'
 
   initialize: (container, application) ->
-    Ember.$.get('/sha').then (response) ->
-      Ember.run -> application.set('originalSha', response)
+    Ember.$.get('/signature').then (response) ->
+      Ember.run -> application.set('originalSignature', response)
       setInterval(->
-        Ember.$.get('/sha').then (response) ->
-          hasNewVersion = response != application.get('originalSha')
+        Ember.$.get('/signature').then (response) ->
+          hasNewVersion = response != application.get('originalSignature')
           application.set('hasNewVersion', hasNewVersion)
       , 10000)
