@@ -29,18 +29,7 @@
       </thead>
       <tbody>
         {{#each filteredContent}}
-          <tr {{bind-attr class=rowClass}}>
-            <td><span class="badge">{{score}}</span></td>
-            <td>
-              <a {{bind-attr href=sprintlyUrl}} target="_blank">
-                {{number}}
-                <i class="glyphicon glyphicon-share"></i>
-              </a>
-            </td>
-            <td>{{title}}</td>
-            <td>{{product.displayName}}</td>
-            <td>{{status}}</td>
-          </tr>
+          {{render 'item_row' this}}
         {{/each}}
       </tbody>
     </table>
