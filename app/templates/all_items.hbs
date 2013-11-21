@@ -1,7 +1,7 @@
 {{#if notEmpty}}
-  {{filteredContent.length}} {{pluralize filteredContent 'Item'}}
+  {{filteredContent.length}} {{pluralize filteredContent.length 'Item'}}
   from
-  {{filteredProducts.length}} {{pluralize filteredProducts 'Product'}}
+  {{filteredProducts.length}} {{pluralize filteredProducts.length 'Product'}}
 
   <div class="row">
     <div class="col-xs-12">
@@ -47,5 +47,5 @@
   </div>
 {{else}}
   Loading all items for {{products.length}}
-  {{pluralize products 'Product'}}...
+  {{pluralize products.length 'Product'}}...
 {{/if}}

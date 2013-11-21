@@ -1,6 +1,2 @@
-Ember.Handlebars.helper 'pluralize', (numberOrArray, singular, options) ->
-  count = if Ember.isArray(numberOrArray)
-    Ember.get(numberOrArray, 'length')
-  else
-    numberOrArray
-  if count == 1 then singular else singular.pluralize()
+Ember.Handlebars.helper 'pluralize', (count, singular, options) ->
+  if count is 1 then singular else singular.pluralize()
