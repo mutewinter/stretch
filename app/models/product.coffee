@@ -10,6 +10,6 @@ App.Product.FIXTURES = [
   {
     id: 1
     name: 'Herp Derp'
-    items: ['1-1']
+    items: ['1-1', '1-2', '1-3', '1-4']
   }
 ]

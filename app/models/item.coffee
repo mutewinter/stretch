@@ -41,6 +41,36 @@ App.Item.FIXTURES = [
     type: 'story'
     product: 1
   }
+  {
+    id: '1-2'
+    title: 'As a herp derp I want to derp herp so that I can derp derp.'
+    status: 'someday'
+    score: 'M'
+    number: '2'
+    archived: false
+    type: 'task'
+    product: 1
+  }
+  {
+    id: '1-3'
+    title: 'Fix the herp showing instead of derp'
+    status: 'backlog'
+    score: 'M'
+    number: '3'
+    archived: false
+    type: 'defect'
+    product: 1
+  }
+  {
+    id: '1-4'
+    title: 'Test that herp does not derp'
+    status: 'current'
+    score: 'M'
+    number: '4'
+    archived: false
+    type: 'test'
+    product: 1
+  }
 ]
 
 #   [
