@@ -15,11 +15,15 @@
       {{/view}}
     </ul>
   </div>
+</div>
 
+<div class="container">
   {{#if App.hasNewVersion}}
-    <div class="alert alert-success">
-      A new version of Stretch is available!
-      <a {{action refresh}} href="#">Refresh</a> get the sweet new features!
+    <div class="alert alert-success new-version">
+      <p>A new version of Stretch is available!</p>
+      <p>
+        <a {{action refresh}} href="#">Refresh</a> get the sweet new features!
+      </p>
     </div>
   {{/if}}
 
