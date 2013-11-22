@@ -36,19 +36,23 @@ module.exports = App.AllItemsController = Ember.ArrayController.extend
   csvData: (->
     json = { }
     json.headers = [
+      'Number'
+      'Type'
       'Size'
-      'Link'
+      'Status'
       'Title'
       'Product'
-      'Status'
+      'Link'
     ]
     json.rows = @get('filteredContent').map (item) ->
       {
-        Size: item.get('score')
         Link: item.get('sprintlyUrl')
-        Title: item.get('title')
+        Number: item.get('number')
         Product: item.get('product.displayName')
+        Size: item.get('score')
         Status: item.get('status')
+        Title: item.get('title')
+        Type: item.get('type')
       }
     "data:text/csv;charset=utf-8,#{escape(csvjson.json2csv(json))}"
   ).property('filteredContent.@each')
