@@ -12,4 +12,14 @@ App.Product.FIXTURES = [
     name: 'Herp Derp'
     items: ['1-1', '1-2', '1-3', '1-4']
   }
+  {
+    id: 2
+    name: 'Derpy Herp'
+    items: []
+  }
+  {
+    id: 3
+    name: 'Duderp'
+    items: []
+  }
 ]
