@@ -33,7 +33,7 @@ module.exports = App.Item = DS.Model.extend
 App.Item.FIXTURES = [
   {
     id: '1-1'
-    title: 'As a herp derp I want to derp herp so that I can derp derp.'
+    title: 'As a herp derp I want to derp herp, so that I can derp derp.'
     status: 'someday'
     score: 'M'
     number: '1'
@@ -43,7 +43,7 @@ App.Item.FIXTURES = [
   }
   {
     id: '1-2'
-    title: 'As a herp derp I want to derp herp so that I can derp derp.'
+    title: 'Do the derp'
     status: 'someday'
     score: 'M'
     number: '2'
