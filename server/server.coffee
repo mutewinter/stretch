@@ -31,6 +31,11 @@ app.get '/api/products', (req, res) ->
     auth: req.session.credentials
   ).pipe(res)
 
+app.get '/api/products/:id', (req, res) ->
+  request.get("#{BASE_URL}/products/#{req.params.id}.json",
+    auth: req.session.credentials
+  ).pipe(res)
+
 itemParams =
   qs:
     limit: 100
