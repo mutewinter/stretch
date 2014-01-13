@@ -11,6 +11,7 @@ if env.get('isDevelopment')
 
   # From http://git.io/HPjymw
   Ember.RSVP.configure 'onerror', (e) ->
+    Ember.Logger.error(e)
     Ember.Logger.error(e.message)
     Ember.Logger.error(e.stack)
 
