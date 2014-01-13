@@ -35,7 +35,8 @@
     "adm-zip": "~0.4.3",
     "express": "~3.4.7",
     "request": "~2.27.0",
-    "brunch-signature": "~1.0.1"
+    "brunch-signature": "~1.0.1",
+    "digest-brunch": "~1.0.4"
   },
   "devDependencies": {
     "qunitjs": "*",
