@@ -1,5 +1,6 @@
 module.exports = App.Product = DS.Model.extend
   name: DS.attr('string')
+  archived: DS.attr('boolean')
   items: DS.hasMany('item', async: true)
 
   displayName: (->
@@ -21,5 +22,11 @@ App.Product.FIXTURES = [
     id: 3
     name: 'Duderp'
     items: []
+  }
+  {
+    id: 4
+    name: 'Archived Product'
+    items: []
+    archived: true
   }
 ]

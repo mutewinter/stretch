@@ -6,6 +6,7 @@ module.exports = App.AllItemsRoute = Ember.Route.extend
   setupController: (controller) ->
     controller.get('content').clear()
     @get('store').findAll('product').then (products) =>
+      products = products.rejectBy('archived')
       controller.set('products', products)
       Ember.RSVP.all(products.invoke('get', 'items')).then (allItems) =>
         allItems.forEach (items) =>
