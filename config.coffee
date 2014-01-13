@@ -27,9 +27,7 @@ exports.config =
 
     stylesheets:
       joinTo:
-        'stylesheets/app.css': /^(app|vendor)/
-      order:
-        before: ['vendor/stylesheets/normalize.css']
+        'stylesheets/app.css': /^app/
 
     templates:
       precompile: true
