@@ -34,7 +34,7 @@
     "gzip-brunch": "~1.0.0",
     "semver": "~2.2.1",
     "adm-zip": "~0.4.3",
-    "express": "~3.4.4",
+    "express": "=3.4.4",
     "request": "~2.27.0",
     "brunch-signature": "https://github.com/mutewinter/brunch-signature/tarball/master"
   },
