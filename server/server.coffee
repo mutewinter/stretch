@@ -14,7 +14,7 @@ app.configure ->
     secret: process.env.STRETCH_SESSION_SECRET
   ))
 
-app.all '*', (req, res, next) ->
+app.all '/api/*', (req, res, next) ->
   username = req.get('Sprintly-User')
   apiKey = req.get('Sprintly-Api-Key')
   req.session.credentials =
