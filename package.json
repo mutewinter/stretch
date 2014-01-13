@@ -30,7 +30,7 @@
     "uglify-js-brunch": "~1.7.3",
     "clean-css-brunch": "~1.7.1",
     "auto-reload-brunch": "~1.7.1",
-    "ember-handlebars-brunch": "~1.0.0",
+    "ember-handlebars-brunch": "~1.2.0",
     "semver": "~2.2.1",
     "adm-zip": "~0.4.3",
     "express": "~3.4.7",
