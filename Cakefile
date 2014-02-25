@@ -42,6 +42,18 @@ task 'test', 'run brunch in the test environment', ->
   process.env.BRUNCH_ENV = 'test'
   spawnBrunch flags, process.env
 
+task 'watch', 'build the app continuously without a server', (options) ->
+  flags = ['w']
+  if options.production?
+    flags.push('-P')
+    process.env.BRUNCH_ENV = 'production'
+
+  if options.port?
+    flags.push '-p'
+    flags.push options.port
+
+  spawnBrunch flags, process.env
+
 # -------------
 # Tapas Updates
 # -------------
